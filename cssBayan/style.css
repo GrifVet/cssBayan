@@ -1,0 +1,134 @@
+body {
+      font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
+    background-color: #fdbe;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+
+/* memes */
+
+.memes {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.memes-item {
+    margin-bottom: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+   
+  
+}
+
+.memes-title {
+    display: block;
+    padding: 20px 30px;
+    position: relative;
+
+    color: #3d1c02;
+    cursor: pointer;
+    
+    transition: background .2s ease-out;
+    border-radius: 10px;
+}
+
+.memes-title:after {
+    content: "";
+    display: block;   
+
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #b91125 transparent transparent transparent;
+   
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+   
+}
+
+.memes-title:hover {
+    background-color: #c09370;
+  
+}
+
+
+.memes-input {
+    width: 0;
+    height: 0;
+
+    -webkit-appearance: none;
+    appearance: none;
+
+    position: absolute;
+}
+
+.memes-input:checked ~ .memes-title {
+    background-color: #ec7f2b; 
+   
+}
+
+.memes-input:checked ~ .memes-title:after {
+     content: "";
+    display: block;   
+    border-style: solid;
+    border-width: 5px 8px 5 0px;
+    border-color: transparent #050505  transparent transparent;
+   
+    position: absolute;
+    top: 50%;
+    right: 15px;
+   transform: translateY(-50%);
+}
+
+.memes-input:checked ~ .memes-img {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+         
+}
+
+.memes-input:hover ~ .memes-title {
+    background-color: #ec7f2b; 
+    
+}
+
+.memes-input:hover ~ .memes-title:after {
+     content: "";
+     display: block;
+     border-style: solid;
+     border-width: 5px 8px 5 0px;
+     border-color: transparent #050505  transparent transparent;
+     position: absolute;
+     top: 50%;
+     right: 15px;
+     transform: translateY(-50%);  
+  
+  }
+
+.memes-input:hover ~ .memes-img {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+   }
+
+
+.memes-img {
+    display: none;
+    padding: 20px 30px; 
+    transition: transform 2s;   
+  
+}
